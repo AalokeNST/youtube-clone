@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+      * {
+        font-family: "Roboto", Arial, Helvetica, sans-serif;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-[#0d0d0d] px-4">
+    <nav class="flex justify-between items-center px-4">
+      <div class="flex gap-5 items-center">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="24px"
+          viewBox="0 -960 960 960"
+          width="24px"
+          fill="#e8eaed"
+        >
+          <path
+            d="M160-269.23v-40h640v40H160ZM160-460v-40h640v40H160Zm0-190.77v-40h640v40H160Z"
+          />
+        </svg>
+        <img src="img/logo-full.svg" class="w-24 py-[18px]" />
+      </div>
+      <div class="flex gap-2 items-center">
+        <div class="flex">
+          <input
+            placeholder="Search"
+            class="rounded-s-full px-5 py-2 border bg-neutral-950 text-white border-neutral-900 w-[584px] h-10 placeholder:text-neutral-500"
+          />
+          <button
+            class="bg-neutral-800 border border-neutral-800 px-5 rounded-e-full"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#e8eaed"
+            >
+              <path
+                d="M779.38-153.85 528.92-404.31q-30 25.54-69 39.54t-78.38 14q-96.1 0-162.67-66.53-66.56-66.53-66.56-162.57 0-96.05 66.53-162.71 66.53-66.65 162.57-66.65 96.05 0 162.71 66.56Q610.77-676.1 610.77-580q0 41.69-14.77 80.69t-38.77 66.69l250.46 250.47-28.31 28.3ZM381.54-390.77q79.61 0 134.42-54.81 54.81-54.8 54.81-134.42 0-79.62-54.81-134.42-54.81-54.81-134.42-54.81-79.62 0-134.42 54.81-54.81 54.8-54.81 134.42 0 79.62 54.81 134.42 54.8 54.81 134.42 54.81Z"
+              />
+            </svg>
+          </button>
+        </div>
+        <button
+          class="rounded-full bg-neutral-800 w-10 h-10 flex items-center justify-center"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            class="fill-neutral-300"
+          >
+            <path
+              d="M480-400q-50 0-85-35t-35-85v-240q0-50 35-85t85-35q50 0 85 35t35 85v240q0 50-35 85t-85 35Zm-40 280v-123q-104-14-172-93t-68-184h80q0 83 58.5 141.5T480-320q83 0 141.5-58.5T680-520h80q0 105-68 184t-172 93v123h-80Z"
+            />
+          </svg>
+        </button>
+      </div>
+      <div class="flex gap-5 items-center">
+        <button>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="#e8eaed"
+          >
+            <path
+              d="M360-320h80v-120h120v-80H440v-120h-80v120H240v80h120v120ZM160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h480q33 0 56.5 23.5T720-720v180l160-160v440L720-420v180q0 33-23.5 56.5T640-160H160Zm0-80h480v-480H160v480Zm0 0v-480 480Z"
+            />
+          </svg>
+        </button>
+        <button>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="#e8eaed"
+          >
+            <path
+              d="M160-200v-80h80v-280q0-83 50-147.5T420-792v-28q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v28q80 20 130 84.5T720-560v280h80v80H160Zm320-300Zm0 420q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM320-280h320v-280q0-66-47-113t-113-47q-66 0-113 47t-47 113v280Z"
+            />
+          </svg>
+        </button>
+        <img
+          src="https://yt3.ggpht.com/9e2o5g_Kboc7Fqxex8kZLfUg0tqP1TnV-QlBg-xHxR3bwT8fUeshI0JLM4jZ7c1HrI6Yu_xh=s88-c-k-c0x00ffffff-no-rj"
+          class="rounded-full w-10"
+        />
+      </div>
+    </nav>
+    <div class="grid grid-cols-6 gap-5">
+      <div class="sidebar col-span-1">
+        <button
+          class="flex gap-5 text-white items-center py-2 px-3 text-sm bg-neutral-800 rounded-lg w-full"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="#e8eaed"
+          >
+            <path d="M160-120v-480l320-240 320 240v480H560v-280H400v280H160Z" />
+          </svg>
+          Home
+        </button>
+        <button
+          class="flex gap-5 text-white items-center py-2 px-3 text-sm hover:bg-neutral-800 rounded-lg w-full"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="#e8eaed"
+          >
+            <path
+              d="M460-398.46 711.54-560 460-721.54v323.08ZM322.31-260Q292-260 271-281q-21-21-21-51.31v-455.38Q250-818 271-839q21-21 51.31-21h455.38Q808-860 829-839q21 21 21 51.31v455.38Q850-302 829-281q-21 21-51.31 21H322.31Zm0-60h455.38q4.62 0 8.46-3.85 3.85-3.84 3.85-8.46v-455.38q0-4.62-3.85-8.46-3.84-3.85-8.46-3.85H322.31q-4.62 0-8.46 3.85-3.85 3.84-3.85 8.46v455.38q0 4.62 3.85 8.46 3.84 3.85 8.46 3.85Zm-140 200Q152-120 131-141q-21-21-21-51.31v-515.38h60v515.38q0 4.62 3.85 8.46 3.84 3.85 8.46 3.85h515.38v60H182.31ZM310-800v480-480Z"
+            />
+          </svg>
+          Video Library
+        </button>
+        <button
+          class="flex gap-5 text-white items-center py-2 px-3 text-sm hover:bg-neutral-800 rounded-lg w-full"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="#e8eaed"
+          >
+            <path
+              d="M160-80q-33 0-56.5-23.5T80-160v-400q0-33 23.5-56.5T160-640h640q33 0 56.5 23.5T880-560v400q0 33-23.5 56.5T800-80H160Zm0-80h640v-400H160v400Zm240-40 240-160-240-160v320ZM160-680v-80h640v80H160Zm120-120v-80h400v80H280ZM160-160v-400 400Z"
+            />
+          </svg>
+          Subscriptions
+        </button>
+        <hr class="border-neutral-700 my-3" />
+        <div class="flex gap-3">
+          <h3 class="text-lg text-white ml-3 items-center font-bold mb-3">
+            You
+          </h3>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="#e8eaed"
+          >
+            <path
+              d="m517.85-480-184-184L376-706.15 602.15-480 376-253.85 333.85-296l184-184Z"
+            />
+          </svg>
+        </div>
+        <button
+          class="flex gap-5 text-white items-center py-2 px-3 text-sm hover:bg-neutral-800 rounded-lg w-full"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="#e8eaed"
+          >
+            <path
+              d="M479.23-140q-129.92 0-226.46-85.54Q156.23-311.08 141.62-440h61.23Q218-336.38 296.12-268.19 374.23-200 479.23-200q117 0 198.5-81.5t81.5-198.5q0-117-81.5-198.5T479.23-760q-65.54 0-122.84 29.12-57.31 29.11-98.7 80.11h104.62v60H159.23v-203.08h60v94.77q48.69-57.46 116.62-89.19Q403.77-820 479.23-820q70.77 0 132.62 26.77 61.84 26.77 107.84 72.77t72.77 107.85q26.77 61.84 26.77 132.61 0 70.77-26.77 132.61-26.77 61.85-72.77 107.85-46 46-107.84 72.77Q550-140 479.23-140Zm120.08-178.92L450.39-467.85V-680h59.99v187.85l131.08 131.07-42.15 42.16Z"
+            />
+          </svg>
+          History
+        </button>
+        <button
+          class="flex gap-5 text-white items-center py-2 px-3 text-sm hover:bg-neutral-800 rounded-lg w-full"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="#e8eaed"
+          >
+            <path
+              d="M140-324.62v-59.99h300.38v59.99H140Zm0-160v-59.99h459.23v59.99H140Zm0-160v-59.99h459.23v59.99H140ZM648.85-140v-278.84l211.53 139.61L648.85-140Z"
+            />
+          </svg>
+          Playlists
+        </button>
+        <button
+          class="flex gap-5 text-white items-center py-2 px-3 text-sm hover:bg-neutral-800 rounded-lg w-full"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="#e8eaed"
+          >
+            <path
+              d="M390-318.46 641.54-480 390-641.54v323.08ZM172.31-180Q142-180 121-201q-21-21-21-51.31v-455.38Q100-738 121-759q21-21 51.31-21h615.38Q818-780 839-759q21 21 21 51.31v455.38Q860-222 839-201q-21 21-51.31 21H172.31Zm0-60h615.38q4.62 0 8.46-3.85 3.85-3.84 3.85-8.46v-455.38q0-4.62-3.85-8.46-3.84-3.85-8.46-3.85H172.31q-4.62 0-8.46 3.85-3.85 3.84-3.85 8.46v455.38q0 4.62 3.85 8.46 3.84 3.85 8.46 3.85ZM160-240v-480 480Z"
+            />
+          </svg>
+          Your Videos
+        </button>
+        <button
+          class="flex gap-5 text-white items-center py-2 px-3 text-sm hover:bg-neutral-800 rounded-lg w-full"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="#e8eaed"
+          >
+            <path
+              d="m618.92-298.92 42.16-42.16L510-492.16V-680h-60v212.15l168.92 168.93ZM480.07-100q-78.84 0-148.21-29.92t-120.68-81.21q-51.31-51.29-81.25-120.63Q100-401.1 100-479.93q0-78.84 29.92-148.21t81.21-120.68q51.29-51.31 120.63-81.25Q401.1-860 479.93-860q78.84 0 148.21 29.92t120.68 81.21q51.31 51.29 81.25 120.63Q860-558.9 860-480.07q0 78.84-29.92 148.21t-81.21 120.68q-51.29 51.31-120.63 81.25Q558.9-100 480.07-100ZM480-480Zm0 320q133 0 226.5-93.5T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160Z"
+            />
+          </svg>
+          Watch Later
+        </button>
+      </div>
+      <div class="content col-span-5">
+        <div class="grid grid-cols-3 gap-5">
+          <div class="col-span-1">
+            <img src="img/thumbnail.jpg" class="w-full rounded-lg mb-3" />
+            <div class="flex gap-2 items-start">
+              <img
+                src="https://yt3.ggpht.com/yrAYobT8hTbkvywErSbr5J2U5v2_W2DA0ljjGrwfft_qj7JS8h_OKlECF-Zil-kf3toBENiK=s68-c-k-c0x00ffffff-no-rj"
+                class="rounded-full w-10 h-10"
+              />
+              <div>
+                <h4 class="text-white text-lg font-bold -mb-1">Title</h4>
+                <p class="text-neutral-500 text-sm">Channel Name</p>
+                <p class="text-neutral-500 text-sm">205K Views ・ 1 year ago</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-1">
+            <img src="img/thumbnail.jpg" class="w-full rounded-lg mb-3" />
+            <div class="flex gap-2 items-start">
+              <img
+                src="https://yt3.ggpht.com/yrAYobT8hTbkvywErSbr5J2U5v2_W2DA0ljjGrwfft_qj7JS8h_OKlECF-Zil-kf3toBENiK=s68-c-k-c0x00ffffff-no-rj"
+                class="rounded-full w-8 h-8"
+              />
+              <div>
+                <h4 class="text-white text-lg font-bold -mb-1">Title</h4>
+                <p class="text-neutral-500 text-sm">Channel Name</p>
+                <p class="text-neutral-500 text-sm">205K Views ・ 1 year ago</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-1">
+            <img src="img/thumbnail.jpg" class="w-full rounded-lg mb-3" />
+            <div class="flex gap-2 items-start">
+              <img
+                src="https://yt3.ggpht.com/yrAYobT8hTbkvywErSbr5J2U5v2_W2DA0ljjGrwfft_qj7JS8h_OKlECF-Zil-kf3toBENiK=s68-c-k-c0x00ffffff-no-rj"
+                class="rounded-full w-10 h-10"
+              />
+              <div>
+                <h4 class="text-white text-lg font-bold -mb-1">Title</h4>
+                <p class="text-neutral-500 text-sm">Channel Name</p>
+                <p class="text-neutral-500 text-sm">205K Views ・ 1 year ago</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-1">
+            <img src="img/thumbnail.jpg" class="w-full rounded-lg mb-3" />
+            <div class="flex gap-2 items-start">
+              <img
+                src="https://yt3.ggpht.com/yrAYobT8hTbkvywErSbr5J2U5v2_W2DA0ljjGrwfft_qj7JS8h_OKlECF-Zil-kf3toBENiK=s68-c-k-c0x00ffffff-no-rj"
+                class="rounded-full w-10 h-10"
+              />
+              <div>
+                <h4 class="text-white text-lg font-bold -mb-1">Title</h4>
+                <p class="text-neutral-500 text-sm">Channel Name</p>
+                <p class="text-neutral-500 text-sm">205K Views ・ 1 year ago</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-1">
+            <img src="img/thumbnail.jpg" class="w-full rounded-lg mb-3" />
+            <div class="flex gap-2 items-start">
+              <img
+                src="https://yt3.ggpht.com/yrAYobT8hTbkvywErSbr5J2U5v2_W2DA0ljjGrwfft_qj7JS8h_OKlECF-Zil-kf3toBENiK=s68-c-k-c0x00ffffff-no-rj"
+                class="rounded-full w-10 h-10"
+              />
+              <div>
+                <h4 class="text-white text-lg font-bold -mb-1">Title</h4>
+                <p class="text-neutral-500 text-sm">Channel Name</p>
+                <p class="text-neutral-500 text-sm">205K Views ・ 1 year ago</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-1">
+            <img src="img/thumbnail.jpg" class="w-full rounded-lg mb-3" />
+            <div class="flex gap-2 items-start">
+              <img
+                src="https://yt3.ggpht.com/yrAYobT8hTbkvywErSbr5J2U5v2_W2DA0ljjGrwfft_qj7JS8h_OKlECF-Zil-kf3toBENiK=s68-c-k-c0x00ffffff-no-rj"
+                class="rounded-full w-10 h-10"
+              />
+              <div>
+                <h4 class="text-white text-lg font-bold -mb-1">Title</h4>
+                <p class="text-neutral-500 text-sm">Channel Name</p>
+                <p class="text-neutral-500 text-sm">205K Views ・ 1 year ago</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
